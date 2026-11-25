@@ -96,7 +96,7 @@ export default function Services() {
                     right next step.
                   </p>
                   <Link
-                    to={`/book-appointment?service=${encodeURIComponent("not-sure")}`}
+                    to={`/contact?service=${encodeURIComponent("not-sure")}`}
                     className="large-white-button"
                     style={{ color: `var(--color-green)` }}
                   >

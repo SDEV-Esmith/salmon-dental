@@ -30,17 +30,11 @@ export default function Home() {
                 Salmon Dental in Sylacauga.
               </p>
               <div className="heading-cta-container">
-                <Link
-                  href="/book-appointment"
-                  className="large-green-button click-effect"
-                >
+                <Link to="/contact" className="large-green-button click-effect">
                   Request Appointment
                   <MdArrowOutward />
                 </Link>
-                <Link
-                  href="/book-appointment"
-                  className="large-white-button click-effect"
-                >
+                <Link t="/services" className="large-white-button click-effect">
                   Explore our care
                   <MdArrowOutward />
                 </Link>
@@ -72,10 +66,7 @@ export default function Home() {
                 find thoughtful treatment, clear conversations, and a team that
                 puts your comfort first.
               </p>
-              <Link
-                href="/book-appointment"
-                className="large-white-button click-effect"
-              >
+              <Link to="/contact" className="large-white-button click-effect">
                 Get to know us
                 <MdArrowOutward />
               </Link>

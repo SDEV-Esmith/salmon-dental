@@ -133,7 +133,7 @@ function Navbar() {
                   </NavLink>
                 </div>
                 <NavLink
-                  to="/book-appointment"
+                  to="/contact"
                   className="nav-link-button click-effect"
                   onClick={() => setMenuOpen(false)}
                 >

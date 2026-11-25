@@ -21,7 +21,7 @@ export default function Card({ title, subtitle, description, service }) {
           {service}
         </p>
         <Link
-          to={`/book-appointment?service=${encodeURIComponent(service)}`}
+          to={`/contact?service=${encodeURIComponent(service)}`}
           className="large-white-button"
           style={{ color: `var(--color-green)` }}
         >

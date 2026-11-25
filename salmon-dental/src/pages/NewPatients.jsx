@@ -73,7 +73,7 @@ export default function NewPatients() {
               <div className="heading-cta-container">
                 <div className="row">
                   <Link
-                    href="/book-appointment"
+                    to="/contact"
                     className="large-green-button click-effect"
                   >
                     Request Appointment
@@ -175,7 +175,7 @@ export default function NewPatients() {
                   We’ll walk you through your options.
                 </p>
                 <Link
-                  to={`/book-appointment?service=${encodeURIComponent("payment")}`}
+                  to={`/contact?service=${encodeURIComponent("payment")}`}
                   className="large-white-button"
                   style={{ color: `var(--color-green)` }}
                 >

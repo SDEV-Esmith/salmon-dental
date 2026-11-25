@@ -18,10 +18,7 @@ export default function Banner() {
           Thoughtful dental care. A team that knows you.
         </p>
       </div>
-      <Link
-        href="/book-appointment"
-        className="large-green-button click-effect"
-      >
+      <Link to="/contact" className="large-green-button click-effect">
         Request Appointment
         <MdArrowOutward />
       </Link>
