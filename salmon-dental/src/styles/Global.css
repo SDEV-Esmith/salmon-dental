@@ -1,0 +1,307 @@
+@import "tailwindcss";
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+}
+
+.main-content {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+@font-face {
+  font-family: "Inter:Bold";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter:Regular";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter:Semi Bold";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter:Medium";
+  src: url("https://static.figma.com/font/Inter_1") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+/*
+ * Garage design tokens from the Figma theme.
+ * These also generate Tailwind utilities such as bg-accent, text-dark,
+ * border-border, font-display, and font-body.
+ */
+@theme {
+  /* Text colors */
+  --color-text: #ffffff;
+  --color-dark: #162f40;
+  --color-green: #376f70;
+  --color-muted: #607179;
+
+  /* Background colors */
+  --color-background: #f8f8f4;
+  --color-dark-bg: #162f40;
+  --color-light-bg: #f8f8f4;
+  --color-subtle: #eaf2ef;
+  /* Border */
+  --color-border: #dfe7e4;
+
+  /* Fonts */
+  --font-display: "Inter:Medium", "Arial Narrow", sans-serif;
+  --font-body: "Inter:Regular", Arial, sans-serif;
+  --font-label: "Inter:Semi Bold", Arial, sans-serif;
+  --font-body-bold: "Inter:Bold", Arial, sans-serif;
+}
+:root {
+  /* Text colors */
+  --color-text: #ffffff;
+  --color-dark: #162f40;
+  --color-green: #376f70;
+  --color-muted: #607179;
+  --color-light-muted: #c5d3d7; /* Background colors */
+  --color-background: #f8f8f4;
+  --color-dark-bg: linear-gradient(to bottom, #162f40, #214761);
+  --color-light-bg: #f8f8f4;
+  --color-subtle: #eaf2ef;
+  --color-subtle-bg: linear-gradient(to bottom, #eaf2ef, #eaf2ef);
+  /* Border */
+  --color-border: #dfe7e4;
+
+  /* Fonts */
+  --font-display: "Inter:Medium", "Arial Narrow", sans-serif;
+  --font-body: "Inter:Regular", Arial, sans-serif;
+  --font-label: "Inter:Semi Bold", Arial, sans-serif;
+  --font-body-bold: "Inter:Bold", Arial, sans-serif;
+}
+@layer base {
+  :root {
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    font-family: var(--font-body);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--color-dark);
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  /* Garage / Heading 1 */
+  .type-heading-1 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0;
+  }
+
+  /* Garage / Heading 2 */
+  .type-heading-2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0;
+  }
+
+  /* Garage / Heading 3 */
+  .type-heading-3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0;
+  }
+
+  /* Garage / Body */
+  .type-body {
+    font-family: var(--font-body);
+    font-size: 0.625rem;
+    font-weight: 400;
+    line-height: 1.45;
+
+    letter-spacing: 0;
+  }
+
+  /* Garage / Label */
+  .type-label {
+    font-family: var(--font-label);
+    font-size: 0.575rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 1px;
+  }
+  .type-medium {
+    font-family: var(--font-body);
+    font-size: 0.375rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0;
+  }
+  /* Garage / Small */
+  .type-small {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
+  .type-small-semibold {
+    font-family: var(--font-label);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.125rem;
+    letter-spacing: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* Tablet and desktop styles */
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  /* Desktop layout adjustments */
+  /* Garage / Heading 1 */
+  .type-heading-1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0;
+  }
+
+  /* Garage / Heading 2 */
+  .type-heading-2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.14;
+    letter-spacing: 0;
+  }
+
+  /* Garage / Heading 3 */
+  .type-heading-3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: 0;
+  }
+
+  /* Garage / Body */
+  .type-body {
+    font-family: var(--font-body);
+    font-size: 0.925rem;
+    font-weight: 400;
+    line-height: 1.45;
+
+    letter-spacing: 0;
+  }
+
+  /* Garage / Label */
+  .type-label {
+    font-family: var(--font-label);
+    font-size: 0.775rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: 1px;
+  }
+  .type-medium {
+    font-family: var(--font-body);
+    font-size: 0.575rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0;
+  }
+  /* Garage / Small */
+  .type-small {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.55;
+    letter-spacing: 0;
+  }
+  .type-small-semibold {
+    font-family: var(--font-label);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.125rem;
+    letter-spacing: 0;
+  }
+}
+
+/* Large desktop */
+@media screen and (min-width: 1440px) {
+  /* Wider screens */
+}

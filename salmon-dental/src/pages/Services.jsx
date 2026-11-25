@@ -79,7 +79,7 @@ export default function Services() {
               <div
                 className="card-container"
                 style={{
-                  backgroundColor: "var(--color-subtle)",
+                  background: "var(--color-subtle-bg)",
                 }}
               >
                 <div className="card-content">
@@ -110,7 +110,7 @@ export default function Services() {
       </section>
       <section
         className="about-section"
-        style={{ backgroundColor: "var(--color-light-bg)" }}
+        style={{ background: "var(--color-light-bg)" }}
       >
         <div className="section-container">
           <div className="welcome-grid">
